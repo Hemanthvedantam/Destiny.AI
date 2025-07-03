@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Destinations - Destiny.AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #1A73E8;
+            --secondary: #34A853;
+            --accent: #FF7043;
+            --bg-primary: #F9FAFB;
+            --bg-secondary: #FFFFFF;
+            --text-primary: #1F2937;
+            --text-secondary: #6B7280;
+            --border-color: #E5E7EB;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Skeleton Animation */
+        @keyframes shimmer {
+            0% {
+                background-position: -200px 0;
+            }
+            100% {
+                background-position: calc(200px + 100%) 0;
+            }
+        }
+        
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200px 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        /* Hero Section with Modern Glassmorphism */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #0F4C75 50%, #1A73E8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:white;stop-opacity:0.1"/><stop offset="100%" style="stop-color:white;stop-opacity:0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        /* Floating Animation */
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+        
+        /* Advanced Card Hover Effects */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .card-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+            z-index: 1;
+        }
+        
+        .card-hover:hover::before {
+            left: 100%;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-15px) rotateX(2deg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 
+                        0 0 0 1px rgba(255, 255, 255, 0.1),
+                        0 0 40px rgba(26, 115, 232, 0.1);
+        }
+        
+        /* Enhanced Ranking Badge */
+        .ranking-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .ranking-badge.top-1 {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+        }
+        
+        .ranking-badge.top-2 {
+            background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+            box-shadow: 0 4px 12px rgba(192, 192, 192, 0.4);
+        }
+        
+        .ranking-badge.top-3 {
+            background: linear-gradient(135deg, #CD7F32 0%, #A0522D 100%);
+            box-shadow: 0 4px 12px rgba(205, 127, 50, 0.4);
+        }
+        
+        /* Trending Badge */
+        .trending-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, #FF4081 0%, #FF6EC7 100%);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 11px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 3px 10px rgba(255, 64, 129, 0.3);
+        }
+        
+        .trending-badge i {
+            font-size: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Glassmorphism Effects */
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-dark {
+            background: rgba(26, 115, 232, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(26, 115, 232, 0.2);
+        }
+        
+        /* Rating Stars Enhancement */
+        .rating {
+            color: #f59e0b;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+        
+        .rating i {
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        /* Location Badge */
+.location-badge {
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    background: rgba(239, 68, 68, 0.9);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index: 10;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.location-badge:hover {
+    background: rgba(239, 68, 68, 1);
+    transform: scale(1.05);
+}
+
+.location-btn {
+    transition: all 0.3s ease;
+}
+
+.location-btn:hover {
+    transform: scale(1.1);
+}
+
+        
+        /* Budget Badge Enhancement */
+        .budget-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .budget-low {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.2) 100%);
+            color: #059669;
+            border-color: rgba(34, 197, 94, 0.2);
+        }
+        
+        .budget-medium {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.2) 100%);
+            color: #D97706;
+            border-color: rgba(245, 158, 11, 0.2);
+        }
+        
+        .budget-high {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(147, 51, 234, 0.2) 100%);
+            color: #7C3AED;
+            border-color: rgba(147, 51, 234, 0.2);
+        }
+        
+        /* Tags Enhancement */
+        .destination-tag {
+            padding: 4px 10px;
+            background: rgba(26, 115, 232, 0.1);
+            color: var(--primary);
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 500;
+            border: 1px solid rgba(26, 115, 232, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .destination-tag:hover {
+            background: rgba(26, 115, 232, 0.2);
+            transform: translateY(-1px);
+        }
+        
+        /* Info Pills */
+        .info-pill {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+        
+        .info-pill-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Like Button */
+        .like-btn {
+            position: absolute;
+            top: 15px;
+            right: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+        
+        .like-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+        
+        .like-btn.liked {
+            background: #FF4081;
+            color: white;
+        }
+        
+        .like-btn i {
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        
+        /* Distance/Flight Time Badge */
+        .distance-badge {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 10;
+        }
+        
+        /* Price Estimation */
+        .price-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(34, 197, 94, 0.9);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            z-index: 10;
+        }
+        
+        /* Mini Review */
+        .mini-review {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: 8px;
+            backdrop-filter: blur(10px);
+        }
+        /* Mobile Menu */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.hidden {
+    display: none;
+}
+
+.mobile-menu:not(.hidden) {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+    
+    .mobile-menu:not(.hidden) {
+        display: block;
+    }
+}
+        /* Pulse Animation */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .card-hover {
+                margin-bottom: 20px;
+            }
+            
+            .ranking-badge {
+                top: 10px;
+                right: 10px;
+                padding: 6px 8px;
+                font-size: 10px;
+            }
+            
+            .like-btn {
+                width: 32px;
+                height: 32px;
+                right: 50px;
+            }
+        }
+        
+        /* Header Enhancement */
+        header {
+    position: relative;
+    z-index: 50;
+}
+        .header-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, #0F4C75 50%, #1A73E8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:white;stop-opacity:0.1"/><stop offset="100%" style="stop-color:white;stop-opacity:0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
+            opacity: 0.1;
+        }
+        
+        /* Navigation Links */
+nav a {
+    position: relative;
+    z-index: 10;
+}
+        /* Image Overlay Enhancement */
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(26, 115, 232, 0.1), rgba(255, 112, 67, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .card-hover:hover .image-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-gradient text-white">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-2xl font-bold">Destiny.AI</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-home text-sm"></i>
+                        Home
+                    </a>
+                    <a href="/popular" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-star text-sm"></i>
+                        Popular
+                    </a>
+                    <a href="/insights" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-chart-line text-sm"></i>
+                        Insights
+                    </a>
+                    <a href="/contact" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-envelope text-sm"></i>
+                        Contact
+                    </a>
+                </div>
+                <button class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Popular Destinations -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Top Travel Destinations
+            </h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                Discover the world's most popular destinations based on traveler ratings and reviews
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {% for dest in destinations %}
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover relative">
+                <!-- Ranking Badge -->
+                {% if loop.index <= 3 %}
+                <div class="ranking-badge {% if loop.index == 1 %}top-1{% elif loop.index == 2 %}top-2{% elif loop.index == 3 %}top-3{% endif %}">
+                    <i class="fas fa-trophy mr-1"></i>
+                    #{{ loop.index }}
+                </div>
+                {% endif %}
+                
+                <!-- Trending Badge -->
+                {% if dest.popularity|int > 85 %}
+                <div class="trending-badge">
+                    <i class="fas fa-fire"></i>
+                    Trending
+                </div>
+                {% endif %}
+                
+                <!-- Like Button -->
+                <button class="like-btn" onclick="toggleLike(this)">
+                    <i class="far fa-heart"></i>
+                </button>
+                
+                <div class="h-48 overflow-hidden relative">
+                    {% if dest.image %}
+                        <img src="{{ dest.image }}" alt="{{ dest.name }}" class="w-full h-full object-cover transition-transform duration-300">
+                        <div class="image-overlay"></div>
+                    {% else %}
+                        <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100 text-gray-400">
+                            <i class="fas fa-mountain text-6xl"></i>
+                        </div>
+                    {% endif %}
+                    
+                    <!-- Distance Badge -->
+                   
+                </div>
+
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">{{ dest.name }}</h3>
+                            <div class="flex items-center">
+                                <div class="rating">
+                                    {% for i in range(5) %}
+                                        {% if i < dest.rating|int %}
+                                            <i class="fas fa-star"></i>
+                                        {% else %}
+                                            <i class="far fa-star"></i>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <span class="text-gray-600 ml-2 text-sm">({{ dest.rating }})</span>
+                            </div>
+                        </div>
+                        <span class="budget-badge {% if dest.budget == 'Low' %}budget-low{% elif dest.budget == 'Medium' %}budget-medium{% else %}budget-high{% endif %}">
+                            {{ dest.budget }}
+                        </span>
+                    </div>
+                    
+                    <!-- Tags -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {% for tag in dest.tags[:3] %}
+                        <span class="destination-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <!-- Info Pills -->
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div class="info-pill">
+                            <div class="info-pill-title">🗓 Best Season</div>
+                            <div class="font-medium">{{ dest.season }}</div>
+                        </div>
+                        <div class="info-pill">
+                            <div class="info-pill-title">📈 Popularity</div>
+                            <div class="font-medium">{{ dest.popularity }}%</div>
+                        </div>
+                        <div class="info-pill">
+                            <div class="info-pill-title">🏨 Hotels</div>
+                            <div class="font-medium">200+</div>
+                        </div>
+                        <div class="info-pill">
+                            <div class="info-pill-title">🎯 Activities</div>
+                            <div class="font-medium">50+</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mini Review -->
+                    <div class="mini-review">
+                        <i class="fas fa-quote-left mr-1"></i>
+                        "Perfect blend of culture and adventure!"
+                    </div>
+                    
+                    <div class="mt-6 flex justify-between items-center">
+                        <a href="/insights?destination={{ dest.name | urlencode }}" class="text-blue-600 hover:text-blue-800 text-sm font-semibold transition-colors">
+                            View Insights <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                        <div class="flex items-center gap-2">
+                            <button class="text-gray-400 hover:text-blue-600 transition-colors">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="text-gray-400 hover:text-green-600 transition-colors">
+                                <i class="fas fa-bookmark"></i>
+                            </button>
+                             <button class="text-gray-400 hover:text-red-600 transition-colors location-btn" 
+            onclick="openLocation('{{ dest.name }}')" 
+            title="View on Map">
+        <i class="fas fa-map-marker-alt"></i>
+    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Destiny.AI All rights reserved. Made with ❤️ for travelers worldwide.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                 <a href="https://www.linkedin.com/in/hemanthvedantam-813455280" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors">
+        <i class="fab fa-linkedin-in text-xl"></i>
+    </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLike(button) {
+            const icon = button.querySelector('i');
+            const isLiked = button.classList.contains('liked');
+            
+            if (isLiked) {
+                button.classList.remove('liked');
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+            } else {
+                button.classList.add('liked');
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                
+                // Add a little animation
+                button.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 200);
+            }
+        }
+        
+        // Add some interactive hover effects
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) rotateX(2deg)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) rotateX(0)';
+            });
+        });
+        // Mobile menu toggle
+const mobileMenuButton = document.querySelector('.md\\:hidden button');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+if (mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', function() {
+        // Create mobile menu if it doesn't exist
+        if (!document.querySelector('.mobile-menu')) {
+            const nav = document.querySelector('nav');
+            const mobileMenuDiv = document.createElement('div');
+            mobileMenuDiv.className = 'mobile-menu md:hidden bg-blue-600 px-6 py-4';
+            mobileMenuDiv.innerHTML = `
+                <a href="/" class="block py-2 hover:text-blue-200 transition-colors">
+                    <i class="fas fa-home text-sm mr-2"></i>Home
+                </a>
+                <a href="/popular" class="block py-2 hover:text-blue-200 transition-colors">
+                    <i class="fas fa-star text-sm mr-2"></i>Popular
+                </a>
+                <a href="/insights" class="block py-2 hover:text-blue-200 transition-colors">
+                    <i class="fas fa-chart-line text-sm mr-2"></i>Insights
+                </a>
+                <a href="/contact" class="block py-2 hover:text-blue-200 transition-colors">
+                    <i class="fas fa-envelope text-sm mr-2"></i>Contact
+                </a>
+            `;
+            nav.parentNode.appendChild(mobileMenuDiv);
+        }
+        
+        const menu = document.querySelector('.mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+}
+function openLocation(destinationName) {
+    // Clean the destination name for URL
+    const cleanName = encodeURIComponent(destinationName.trim());
+    
+    // Create Google Maps URL
+    const mapsUrl = `https://www.google.com/maps/search/${cleanName}`;
+    
+    // Open in new tab
+    window.open(mapsUrl, '_blank');
+}
+    </script>
+</body>
+</html>

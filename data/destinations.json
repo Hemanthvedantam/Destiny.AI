@@ -1,0 +1,1152 @@
+[
+  {
+    "name": "Machu Picchu, Peru",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxNYWNodSUyMFBpY2NodSUyQyUyMFBlcnV8ZW58MHx8fHwxNzUxNTQyMjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 77,
+    "reviews": [
+      "Visiting Machu Picchu, Peru was an unforgettable experience!",
+      "I would definitely recommend Machu Picchu, Peru to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Medium",
+    "activities": [
+      "Wildlife Watching",
+      "Cultural Tour",
+      "Sunset Watching"
+    ],
+    "why_perfect": "Machu Picchu, Peru offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Great Wall of China",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1608037521277-154cd1b89191?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxHcmVhdCUyMFdhbGwlMjBvZiUyMENoaW5hfGVufDB8fHx8MTc1MTU0MjIzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 95,
+    "reviews": [
+      "Visiting Great Wall of China was an unforgettable experience!",
+      "I would definitely recommend Great Wall of China to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Great Wall of China offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 5.0
+  },
+  {
+    "name": "Taj Mahal, India",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1718169538815-275e0cd7b897?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxUYWolMjBNYWhhbCUyQyUyMEluZGlhfGVufDB8fHx8MTc1MTU0MjIzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 97,
+    "reviews": [
+      "Visiting Taj Mahal, India was an unforgettable experience!",
+      "I would definitely recommend Taj Mahal, India to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Medium",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Taj Mahal, India offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Santorini, Greece",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxTYW50b3JpbmklMkMlMjBHcmVlY2V8ZW58MHx8fHwxNzUxNTQyMjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 73,
+    "reviews": [
+      "Visiting Santorini, Greece was an unforgettable experience!",
+      "I would definitely recommend Santorini, Greece to anyone."
+    ],
+    "season": "Winter",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Santorini, Greece offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Paris, France",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1549144511-f099e773c147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxQYXJpcyUyQyUyMEZyYW5jZXxlbnwwfHx8fDE3NTE1NDIyNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 72,
+    "reviews": [
+      "Visiting Paris, France was an unforgettable experience!",
+      "I would definitely recommend Paris, France to anyone."
+    ],
+    "season": "Summer",
+    "budget": "Medium",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Paris, France offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 5.0
+  },
+  {
+    "name": "Rome, Italy",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxSb21lJTJDJTIwSXRhbHl8ZW58MHx8fHwxNzUxNTQyMjQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 84,
+    "reviews": [
+      "Visiting Rome, Italy was an unforgettable experience!",
+      "I would definitely recommend Rome, Italy to anyone."
+    ],
+    "season": "Winter",
+    "budget": "Low",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Rome, Italy offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.8
+  },
+  {
+    "name": "Venice, Italy",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxWZW5pY2UlMkMlMjBJdGFseXxlbnwwfHx8fDE3NTE1NDIyNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 94,
+    "reviews": [
+      "Visiting Venice, Italy was an unforgettable experience!",
+      "I would definitely recommend Venice, Italy to anyone."
+    ],
+    "season": "Winter",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Venice, Italy offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.7
+  },
+  {
+    "name": "Kyoto, Japan",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxLeW90byUyQyUyMEphcGFufGVufDB8fHx8MTc1MTU0MjI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 91,
+    "reviews": [
+      "Visiting Kyoto, Japan was an unforgettable experience!",
+      "I would definitely recommend Kyoto, Japan to anyone."
+    ],
+    "season": "Winter",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Kyoto, Japan offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.7
+  },
+  {
+    "name": "Bali, Indonesia",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxCYWxpJTJDJTIwSW5kb25lc2lhfGVufDB8fHx8MTc1MTU0MjI0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 76,
+    "reviews": [
+      "Visiting Bali, Indonesia was an unforgettable experience!",
+      "I would definitely recommend Bali, Indonesia to anyone."
+    ],
+    "season": "Spring",
+    "budget": "High",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Bali, Indonesia offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "H\u1ea1 Long Bay, Vietnam",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1703555853329-b9fab31e92ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxIJUUxJUJBJUExJTIwTG9uZyUyMEJheSUyQyUyMFZpZXRuYW18ZW58MHx8fHwxNzUxNTQyMjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 94,
+    "reviews": [
+      "Visiting H\u1ea1 Long Bay, Vietnam was an unforgettable experience!",
+      "I would definitely recommend H\u1ea1 Long Bay, Vietnam to anyone."
+    ],
+    "season": "Winter",
+    "budget": "Medium",
+    "activities": [
+      "Wildlife Watching",
+      "Cultural Tour",
+      "Sunset Watching"
+    ],
+    "why_perfect": "H\u1ea1 Long Bay, Vietnam offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.3
+  },
+  {
+    "name": "Salar de Uyuni, Bolivia",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1730462826088-ef07f32b2629?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxTYWxhciUyMGRlJTIwVXl1bmklMkMlMjBCb2xpdmlhfGVufDB8fHx8MTc1MTU0MjI0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 93,
+    "reviews": [
+      "Visiting Salar de Uyuni, Bolivia was an unforgettable experience!",
+      "I would definitely recommend Salar de Uyuni, Bolivia to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Salar de Uyuni, Bolivia offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Pura Ulun Danu Bratan, Bali",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1657789731948-c52a669862d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxQdXJhJTIwVWx1biUyMERhbnUlMjBCcmF0YW4lMkMlMjBCYWxpfGVufDB8fHx8MTc1MTU0MjI1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 86,
+    "reviews": [
+      "Visiting Pura Ulun Danu Bratan, Bali was an unforgettable experience!",
+      "I would definitely recommend Pura Ulun Danu Bratan, Bali to anyone."
+    ],
+    "season": "Summer",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Pura Ulun Danu Bratan, Bali offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.7
+  },
+  {
+    "name": "Shark Bay, Australia",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1628506938916-209a24db0e99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxTaGFyayUyMEJheSUyQyUyMEF1c3RyYWxpYXxlbnwwfHx8fDE3NTE1NDIyNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 87,
+    "reviews": [
+      "Visiting Shark Bay, Australia was an unforgettable experience!",
+      "I would definitely recommend Shark Bay, Australia to anyone."
+    ],
+    "season": "Summer",
+    "budget": "Medium",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Shark Bay, Australia offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Li River, China",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1635315621985-fb1564537773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxMaSUyMFJpdmVyJTJDJTIwQ2hpbmF8ZW58MHx8fHwxNzUxNTQyMjUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 94,
+    "reviews": [
+      "Visiting Li River, China was an unforgettable experience!",
+      "I would definitely recommend Li River, China to anyone."
+    ],
+    "season": "Summer",
+    "budget": "High",
+    "activities": [
+      "Wildlife Watching",
+      "Cultural Tour",
+      "Sunset Watching"
+    ],
+    "why_perfect": "Li River, China offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.6
+  },
+  {
+    "name": "Petra, Jordan",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1615811648503-479d06197ff3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxQZXRyYSUyQyUyMEpvcmRhbnxlbnwwfHx8fDE3NTE1NDIyNTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 93,
+    "reviews": [
+      "Visiting Petra, Jordan was an unforgettable experience!",
+      "I would definitely recommend Petra, Jordan to anyone."
+    ],
+    "season": "Spring",
+    "budget": "Low",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Petra, Jordan offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Grand Canyon, USA",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1608226891932-28adc7d39eea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxHcmFuZCUyMENhbnlvbiUyQyUyMFVTQXxlbnwwfHx8fDE3NTE1NDIyNTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 75,
+    "reviews": [
+      "Visiting Grand Canyon, USA was an unforgettable experience!",
+      "I would definitely recommend Grand Canyon, USA to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "High",
+    "activities": [
+      "Wildlife Watching",
+      "Cultural Tour",
+      "Sunset Watching"
+    ],
+    "why_perfect": "Grand Canyon, USA offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.6
+  },
+  {
+    "name": "Banff National Park, Canada",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1542298444-e33c4aa2dbd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxCYW5mZiUyME5hdGlvbmFsJTIwUGFyayUyQyUyMENhbmFkYXxlbnwwfHx8fDE3NTE1NDIyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 72,
+    "reviews": [
+      "Visiting Banff National Park, Canada was an unforgettable experience!",
+      "I would definitely recommend Banff National Park, Canada to anyone."
+    ],
+    "season": "Spring",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Banff National Park, Canada offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.8
+  },
+  {
+    "name": "Yellowstone, USA",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1568180365699-0d75fd41caa6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxZZWxsb3dzdG9uZSUyQyUyMFVTQXxlbnwwfHx8fDE3NTE1NDIyNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 89,
+    "reviews": [
+      "Visiting Yellowstone, USA was an unforgettable experience!",
+      "I would definitely recommend Yellowstone, USA to anyone."
+    ],
+    "season": "Winter",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Yellowstone, USA offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Cinque Terre, Italy",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1528645752497-dce79f475d63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxDaW5xdWUlMjBUZXJyZSUyQyUyMEl0YWx5fGVufDB8fHx8MTc1MTU0MjI2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 88,
+    "reviews": [
+      "Visiting Cinque Terre, Italy was an unforgettable experience!",
+      "I would definitely recommend Cinque Terre, Italy to anyone."
+    ],
+    "season": "Summer",
+    "budget": "Medium",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Cinque Terre, Italy offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Lofoten Islands, Norway",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1659424765389-a64c848ca038?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxMb2ZvdGVuJTIwSXNsYW5kcyUyQyUyME5vcndheXxlbnwwfHx8fDE3NTE1NDIyNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 78,
+    "reviews": [
+      "Visiting Lofoten Islands, Norway was an unforgettable experience!",
+      "I would definitely recommend Lofoten Islands, Norway to anyone."
+    ],
+    "season": "Summer",
+    "budget": "High",
+    "activities": [
+      "Wildlife Watching",
+      "Cultural Tour",
+      "Sunset Watching"
+    ],
+    "why_perfect": "Lofoten Islands, Norway offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 5.0
+  },
+  {
+    "name": "Queenstown, New Zealand",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1547314283-befb6cc5cf29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxRdWVlbnN0b3duJTJDJTIwTmV3JTIwWmVhbGFuZHxlbnwwfHx8fDE3NTE1NDIyNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 86,
+    "reviews": [
+      "Visiting Queenstown, New Zealand was an unforgettable experience!",
+      "I would definitely recommend Queenstown, New Zealand to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Medium",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Queenstown, New Zealand offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Amalfi Coast, Italy",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1533656338503-b22f63e96cd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxBbWFsZmklMjBDb2FzdCUyQyUyMEl0YWx5fGVufDB8fHx8MTc1MTU0MjI2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 83,
+    "reviews": [
+      "Visiting Amalfi Coast, Italy was an unforgettable experience!",
+      "I would definitely recommend Amalfi Coast, Italy to anyone."
+    ],
+    "season": "Winter",
+    "budget": "High",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Amalfi Coast, Italy offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Dubrovnik, Croatia",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1555990793-da11153b2473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxEdWJyb3ZuaWslMkMlMjBDcm9hdGlhfGVufDB8fHx8MTc1MTU0MjI2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 74,
+    "reviews": [
+      "Visiting Dubrovnik, Croatia was an unforgettable experience!",
+      "I would definitely recommend Dubrovnik, Croatia to anyone."
+    ],
+    "season": "Spring",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Dubrovnik, Croatia offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Reykjavik, Iceland",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1606130503037-6a8ef67c9d2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxSZXlramF2aWslMkMlMjBJY2VsYW5kfGVufDB8fHx8MTc1MTU0MjI2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 91,
+    "reviews": [
+      "Visiting Reykjavik, Iceland was an unforgettable experience!",
+      "I would definitely recommend Reykjavik, Iceland to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "High",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Reykjavik, Iceland offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Kruger National Park, South Africa",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1698488446758-cf9a0265d50b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxLcnVnZXIlMjBOYXRpb25hbCUyMFBhcmslMkMlMjBTb3V0aCUyMEFmcmljYXxlbnwwfHx8fDE3NTE1NDIyNzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 97,
+    "reviews": [
+      "Visiting Kruger National Park, South Africa was an unforgettable experience!",
+      "I would definitely recommend Kruger National Park, South Africa to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Kruger National Park, South Africa offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Gal\u00e1pagos Islands, Ecuador",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1500934334117-2f8794393a61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxHYWwlQzMlQTFwYWdvcyUyMElzbGFuZHMlMkMlMjBFY3VhZG9yfGVufDB8fHx8MTc1MTU0MjI3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 98,
+    "reviews": [
+      "Visiting Gal\u00e1pagos Islands, Ecuador was an unforgettable experience!",
+      "I would definitely recommend Gal\u00e1pagos Islands, Ecuador to anyone."
+    ],
+    "season": "Spring",
+    "budget": "Medium",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Gal\u00e1pagos Islands, Ecuador offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.3
+  },
+  {
+    "name": "Antelope Canyon, USA",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1606365798134-4ad21772d811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxBbnRlbG9wZSUyMENhbnlvbiUyQyUyMFVTQXxlbnwwfHx8fDE3NTE1NDIyNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 100,
+    "reviews": [
+      "Visiting Antelope Canyon, USA was an unforgettable experience!",
+      "I would definitely recommend Antelope Canyon, USA to anyone."
+    ],
+    "season": "Spring",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Antelope Canyon, USA offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Lake Bled, Slovenia",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1661094049601-678d22cbf891?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxMYWtlJTIwQmxlZCUyQyUyMFNsb3ZlbmlhfGVufDB8fHx8MTc1MTU0MjI3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 93,
+    "reviews": [
+      "Visiting Lake Bled, Slovenia was an unforgettable experience!",
+      "I would definitely recommend Lake Bled, Slovenia to anyone."
+    ],
+    "season": "Spring",
+    "budget": "High",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Lake Bled, Slovenia offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Mount Fuji, Japan",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1675610568281-c8412786f8f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxNb3VudCUyMEZ1amklMkMlMjBKYXBhbnxlbnwwfHx8fDE3NTE1NDIyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 79,
+    "reviews": [
+      "Visiting Mount Fuji, Japan was an unforgettable experience!",
+      "I would definitely recommend Mount Fuji, Japan to anyone."
+    ],
+    "season": "Winter",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Mount Fuji, Japan offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Phuket, Thailand",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1534008897995-27a23e859048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxQaHVrZXQlMkMlMjBUaGFpbGFuZHxlbnwwfHx8fDE3NTE1NDIyNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 76,
+    "reviews": [
+      "Visiting Phuket, Thailand was an unforgettable experience!",
+      "I would definitely recommend Phuket, Thailand to anyone."
+    ],
+    "season": "Spring",
+    "budget": "Medium",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Phuket, Thailand offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Barcelona, Spain",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1654684784883-3423612c0629?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxCYXJjZWxvbmElMkMlMjBTcGFpbnxlbnwwfHx8fDE3NTE1NDIyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 99,
+    "reviews": [
+      "Visiting Barcelona, Spain was an unforgettable experience!",
+      "I would definitely recommend Barcelona, Spain to anyone."
+    ],
+    "season": "Summer",
+    "budget": "High",
+    "activities": [
+      "Wildlife Watching",
+      "Cultural Tour",
+      "Sunset Watching"
+    ],
+    "why_perfect": "Barcelona, Spain offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Athens, Greece",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1555993539-1732b0258235?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxBdGhlbnMlMkMlMjBHcmVlY2V8ZW58MHx8fHwxNzUxNTQyMjgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 75,
+    "reviews": [
+      "Visiting Athens, Greece was an unforgettable experience!",
+      "I would definitely recommend Athens, Greece to anyone."
+    ],
+    "season": "Summer",
+    "budget": "High",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Athens, Greece offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.7
+  },
+  {
+    "name": "Dubai, UAE",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1518684079-3c830dcef090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxEdWJhaSUyQyUyMFVBRXxlbnwwfHx8fDE3NTE1NDIyODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 98,
+    "reviews": [
+      "Visiting Dubai, UAE was an unforgettable experience!",
+      "I would definitely recommend Dubai, UAE to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Medium",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Dubai, UAE offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.8
+  },
+  {
+    "name": "Seoul, South Korea",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1448523183439-d2ac62aca997?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxTZW91bCUyQyUyMFNvdXRoJTIwS29yZWF8ZW58MHx8fHwxNzUxNTQyMjgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 77,
+    "reviews": [
+      "Visiting Seoul, South Korea was an unforgettable experience!",
+      "I would definitely recommend Seoul, South Korea to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Seoul, South Korea offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Sydney, Australia",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxTeWRuZXklMkMlMjBBdXN0cmFsaWF8ZW58MHx8fHwxNzUxNTQyMjg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 88,
+    "reviews": [
+      "Visiting Sydney, Australia was an unforgettable experience!",
+      "I would definitely recommend Sydney, Australia to anyone."
+    ],
+    "season": "Spring",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Sydney, Australia offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.3
+  },
+  {
+    "name": "Cape Town, South Africa",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1580060860978-d479ebf95a53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxDYXBlJTIwVG93biUyQyUyMFNvdXRoJTIwQWZyaWNhfGVufDB8fHx8MTc1MTU0MjI4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 81,
+    "reviews": [
+      "Visiting Cape Town, South Africa was an unforgettable experience!",
+      "I would definitely recommend Cape Town, South Africa to anyone."
+    ],
+    "season": "Summer",
+    "budget": "High",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Cape Town, South Africa offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Istanbul, Turkey",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1527838832700-5059252407fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxJc3RhbmJ1bCUyQyUyMFR1cmtleXxlbnwwfHx8fDE3NTE1NDIyODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 75,
+    "reviews": [
+      "Visiting Istanbul, Turkey was an unforgettable experience!",
+      "I would definitely recommend Istanbul, Turkey to anyone."
+    ],
+    "season": "Spring",
+    "budget": "High",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Istanbul, Turkey offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.7
+  },
+  {
+    "name": "Cairo, Egypt",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxDYWlybyUyQyUyMEVneXB0fGVufDB8fHx8MTc1MTU0MjI4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 80,
+    "reviews": [
+      "Visiting Cairo, Egypt was an unforgettable experience!",
+      "I would definitely recommend Cairo, Egypt to anyone."
+    ],
+    "season": "Winter",
+    "budget": "Low",
+    "activities": [
+      "Wildlife Watching",
+      "Cultural Tour",
+      "Sunset Watching"
+    ],
+    "why_perfect": "Cairo, Egypt offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.3
+  },
+  {
+    "name": "Buenos Aires, Argentina",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxCdWVub3MlMjBBaXJlcyUyQyUyMEFyZ2VudGluYXxlbnwwfHx8fDE3NTE1NDIyOTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 84,
+    "reviews": [
+      "Visiting Buenos Aires, Argentina was an unforgettable experience!",
+      "I would definitely recommend Buenos Aires, Argentina to anyone."
+    ],
+    "season": "Summer",
+    "budget": "Low",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Buenos Aires, Argentina offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Rio de Janeiro, Brazil",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxSaW8lMjBkZSUyMEphbmVpcm8lMkMlMjBCcmF6aWx8ZW58MHx8fHwxNzUxNTQyMjkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 99,
+    "reviews": [
+      "Visiting Rio de Janeiro, Brazil was an unforgettable experience!",
+      "I would definitely recommend Rio de Janeiro, Brazil to anyone."
+    ],
+    "season": "Winter",
+    "budget": "Low",
+    "activities": [
+      "Wildlife Watching",
+      "Cultural Tour",
+      "Sunset Watching"
+    ],
+    "why_perfect": "Rio de Janeiro, Brazil offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  },
+  {
+    "name": "Prague, Czech Republic",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1458150945447-7fb764c11a92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxQcmFndWUlMkMlMjBDemVjaCUyMFJlcHVibGljfGVufDB8fHx8MTc1MTU0MjI5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 79,
+    "reviews": [
+      "Visiting Prague, Czech Republic was an unforgettable experience!",
+      "I would definitely recommend Prague, Czech Republic to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Medium",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Prague, Czech Republic offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 5.0
+  },
+  {
+    "name": "Helsinki, Finland",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1683119166692-83b31b7545bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxIZWxzaW5raSUyQyUyMEZpbmxhbmR8ZW58MHx8fHwxNzUxNTQyMjk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 77,
+    "reviews": [
+      "Visiting Helsinki, Finland was an unforgettable experience!",
+      "I would definitely recommend Helsinki, Finland to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Helsinki, Finland offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Vienna, Austria",
+    "tags": [
+      "historical",
+      "romantic",
+      "architecture"
+    ],
+    "image": "https://images.unsplash.com/photo-1567597435927-80055c207c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxWaWVubmElMkMlMjBBdXN0cmlhfGVufDB8fHx8MTc1MTU0MjI5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 78,
+    "reviews": [
+      "Visiting Vienna, Austria was an unforgettable experience!",
+      "I would definitely recommend Vienna, Austria to anyone."
+    ],
+    "season": "Summer",
+    "budget": "Medium",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Vienna, Austria offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Edinburgh, Scotland",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1730181630386-4f33d4797fe2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxFZGluYnVyZ2glMkMlMjBTY290bGFuZHxlbnwwfHx8fDE3NTE1NDIyOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 78,
+    "reviews": [
+      "Visiting Edinburgh, Scotland was an unforgettable experience!",
+      "I would definitely recommend Edinburgh, Scotland to anyone."
+    ],
+    "season": "Winter",
+    "budget": "High",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Edinburgh, Scotland offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Munich, Germany",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1593945164238-f5e6c4f259f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxNdW5pY2glMkMlMjBHZXJtYW55fGVufDB8fHx8MTc1MTU0MjMwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 77,
+    "reviews": [
+      "Visiting Munich, Germany was an unforgettable experience!",
+      "I would definitely recommend Munich, Germany to anyone."
+    ],
+    "season": "Summer",
+    "budget": "High",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Munich, Germany offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Zurich, Switzerland",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1689717850353-92c66a4f1441?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxadXJpY2glMkMlMjBTd2l0emVybGFuZHxlbnwwfHx8fDE3NTE1NDIzMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 88,
+    "reviews": [
+      "Visiting Zurich, Switzerland was an unforgettable experience!",
+      "I would definitely recommend Zurich, Switzerland to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Zurich, Switzerland offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Luxembourg City",
+    "tags": [
+      "nature",
+      "wildlife",
+      "adventure"
+    ],
+    "image": "https://images.unsplash.com/photo-1588336899284-950764f07147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxMdXhlbWJvdXJnJTIwQ2l0eXxlbnwwfHx8fDE3NTE1NDIzMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 77,
+    "reviews": [
+      "Visiting Luxembourg City was an unforgettable experience!",
+      "I would definitely recommend Luxembourg City to anyone."
+    ],
+    "season": "Autumn",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Luxembourg City offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.9
+  },
+  {
+    "name": "Tallinn, Estonia",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1724178166647-dae6e9372110?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxUYWxsaW5uJTJDJTIwRXN0b25pYXxlbnwwfHx8fDE3NTE1NDIzMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 78,
+    "reviews": [
+      "Visiting Tallinn, Estonia was an unforgettable experience!",
+      "I would definitely recommend Tallinn, Estonia to anyone."
+    ],
+    "season": "Winter",
+    "budget": "Medium",
+    "activities": [
+      "Boating",
+      "Snorkeling",
+      "Gardens"
+    ],
+    "why_perfect": "Tallinn, Estonia offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.3
+  },
+  {
+    "name": "Lisbon, Portugal",
+    "tags": [
+      "beach",
+      "relaxation",
+      "scenic"
+    ],
+    "image": "https://images.unsplash.com/photo-1682616789315-b9a9f1e95ca7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxMaXNib24lMkMlMjBQb3J0dWdhbHxlbnwwfHx8fDE3NTE1NDIzMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 71,
+    "reviews": [
+      "Visiting Lisbon, Portugal was an unforgettable experience!",
+      "I would definitely recommend Lisbon, Portugal to anyone."
+    ],
+    "season": "Summer",
+    "budget": "Low",
+    "activities": [
+      "Sightseeing",
+      "Dining",
+      "Photography"
+    ],
+    "why_perfect": "Lisbon, Portugal offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.5
+  },
+  {
+    "name": "Marrakech, Morocco",
+    "tags": [
+      "cultural",
+      "solo",
+      "photography"
+    ],
+    "image": "https://images.unsplash.com/photo-1685311572420-513619470404?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzI2NDF8MHwxfHNlYXJjaHwxfHxNYXJyYWtlY2glMkMlMjBNb3JvY2NvfGVufDB8fHx8MTc1MTU0MjMwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "popularity": 97,
+    "reviews": [
+      "Visiting Marrakech, Morocco was an unforgettable experience!",
+      "I would definitely recommend Marrakech, Morocco to anyone."
+    ],
+    "season": "Summer",
+    "budget": "Low",
+    "activities": [
+      "Hiking",
+      "Museum",
+      "Temple Visit"
+    ],
+    "why_perfect": "Marrakech, Morocco offers an amazing blend of culture, nature, and memorable experiences.",
+    "rating": 4.4
+  }
+]

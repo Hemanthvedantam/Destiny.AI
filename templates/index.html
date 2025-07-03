@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny.AI - Discover Your Next Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #1A73E8;
+            --secondary: #34A853;
+            --accent: #FF7043;
+            --bg-primary: #F9FAFB;
+            --bg-secondary: #FFFFFF;
+            --text-primary: #1F2937;
+            --text-secondary: #6B7280;
+            --border-color: #E5E7EB;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Skeleton Animation */
+        @keyframes shimmer {
+            0% {
+                background-position: -200px 0;
+            }
+            100% {
+                background-position: calc(200px + 100%) 0;
+            }
+        }
+        
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200px 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        /* Hero Section with Modern Glassmorphism */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #0F4C75 50%, #1A73E8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:white;stop-opacity:0.1"/><stop offset="100%" style="stop-color:white;stop-opacity:0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        /* Floating Animation */
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+        
+        /* Advanced Card Hover Effects */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .card-hover:hover::before {
+            left: 100%;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Glassmorphism Effects */
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-dark {
+            background: rgba(26, 115, 232, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(26, 115, 232, 0.2);
+        }
+        
+        /* Modern Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, #0F4C75 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(26, 115, 232, 0.3);
+        }
+        
+        .btn-secondary {
+            background: rgba(26, 115, 232, 0.1);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Enhanced Form Styles */
+        .form-group {
+            position: relative;
+            margin-bottom: 24px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+        
+        /* Checkbox Styles */
+        .custom-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: white;
+        }
+        
+        .custom-checkbox:hover {
+            border-color: var(--primary);
+            background: rgba(26, 115, 232, 0.05);
+        }
+        
+        .custom-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .custom-checkbox input[type="checkbox"]:checked {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        /* Chatbot Enhanced Design */
+        .chatbot {
+    background: #fefdfc; /* Sandy beige */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+        
+        .chatbot:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+        /* Blue Gradient */
+.bg-gradient-to-r.from-blue-50.to-blue-100 {
+    background: linear-gradient(90deg, #e0f7fa, #b2ebf2);
+}
+
+/* Orange Gradient */
+.bg-gradient-to-r.from-orange-50.to-orange-100 {
+    background: linear-gradient(90deg, #fff3e0, #ffccbc);
+}
+
+/* Purple Gradient */
+.bg-gradient-to-r.from-purple-50.to-purple-100 {
+    background: linear-gradient(90deg, #ede7f6, #d1c4e9);
+}
+
+        /* Icon Styling */
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .icon-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+        
+        .card-hover:hover .icon-container::before {
+            transform: translateX(100%);
+        }
+        .dot {
+    animation: blink 1.5s infinite;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+@keyframes blink {
+    0%, 20% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .chatbot {
+                width: 90vw !important;
+                right: 5vw !important;
+            }
+        }
+        
+        /* Micro-interactions */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Travel Image Hover Effect */
+        .travel-image {
+            transition: all 0.4s ease;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .travel-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(26, 115, 232, 0.1), rgba(255, 112, 67, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .travel-image:hover::after {
+            opacity: 1;
+        }
+        
+        .travel-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Floating Chatbot -->
+    <!-- Chat Trigger Button -->
+<button id="chat-toggle" class="fixed bottom-8 right-8 z-50 bg-gradient-to-br from-blue-500 to-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+    <span class="text-2xl">🤖</span>
+</button>
+
+<!-- Chatbot Box (Initially Hidden) -->
+<div id="chatbox" class="fixed bottom-28 right-8 z-50 chatbot p-6 w-80 hidden">
+
+        <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-robot text-white text-sm"></i>
+                </div>
+                <h3 class="font-bold text-gray-800">Travel Assistant</h3>
+            </div>
+            <button class="text-gray-400 hover:text-gray-600 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 mb-4 border border-blue-100">
+            <p class="text-sm text-gray-700" id="chat-greeting">👋 Loading ideas...</p>
+            <div class="text-xs text-gray-400 mt-2">TravelBot is typing<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+        </div>
+        <div class="space-y-3">
+            <form action="/chatbot" method="POST">
+                <button name="action" value="recommendations" class="w-full text-left py-3 px-4 bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 rounded-lg transition-all duration-300 text-blue-700 text-sm font-medium flex items-center gap-3">
+                    <i class="fas fa-compass text-blue-600"></i>
+                    Get Travel Recommendations
+                </button>
+                <button name="action" value="popular" class="w-full text-left py-3 px-4 bg-gradient-to-r from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 rounded-lg transition-all duration-300 text-orange-700 text-sm font-medium flex items-center gap-3">
+                    <i class="fas fa-fire text-orange-600"></i>
+                    View Popular Destinations
+                </button>
+                <button name="action" value="insights" class="w-full text-left py-3 px-4 bg-gradient-to-r from-purple-50 to-purple-100 hover:from-purple-100 hover:to-purple-200 rounded-lg transition-all duration-300 text-purple-700 text-sm font-medium flex items-center gap-3">
+                    <i class="fas fa-chart-bar text-purple-600"></i>
+                    Explore Destination Insights
+                </button>
+            </form>
+        </div>
+    </div>
+<script>
+    const prompts = [
+        "✨ Top Destinations",
+        "🌤️ Weather in Bali",
+        "💰 Budget Travel Ideas",
+        "🧳 Packing Essentials",
+        "🏝️ Weekend Getaways",
+        "✈️ Flights Under $200",
+        "🌍 Hidden Gems",
+        "📅 Best Time to Visit Japan"
+    ];
+
+    let i = 0;
+    const greeting = document.getElementById("chat-greeting");
+
+    function rotatePrompt() {
+        greeting.innerText = prompts[i % prompts.length];
+        i++;
+    }
+
+    rotatePrompt();
+    setInterval(rotatePrompt, 4000);
+</script>
+
+    <!-- Header -->
+    <header class="hero text-white pt-8 pb-32 relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-plane text-white text-lg"></i>
+                    </div>
+                    <div class="text-2xl font-bold">Destiny.AI</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-home text-sm"></i>
+                        Home
+                    </a>
+                    <a href="/popular" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-star text-sm"></i>
+                        Popular
+                    </a>
+                    <a href="/insights" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-chart-line text-sm"></i>
+                        Insights
+                    </a>
+                    <a href="/contact" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-envelope text-sm"></i>
+                        Contact
+                    </a>
+                </div>
+                <button class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            
+            <div class="mt-20 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Discover Your Perfect 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-pink-300">
+                        Getaway
+                    </span>
+                </h1>
+                <p class="text-xl max-w-2xl mx-auto mb-10 text-blue-100">
+                    AI-powered travel recommendations tailored to your unique preferences and dreams
+                </p>
+                
+                <div class="max-w-md mx-auto floating">
+                    <div class="travel-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Travel Adventure" 
+                             class="w-full h-64 object-cover rounded-2xl shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Recommendation Form -->
+    <section class="container mx-auto px-6 -mt-24 relative z-10">
+        <div class="glass rounded-3xl p-8 lg:p-12 shadow-2xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                    Personalized Travel Recommendations
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Tell us about your preferences and let our AI create the perfect travel experience for you
+                </p>
+            </div>
+            
+            <form action="/recommend" method="POST" class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Interests -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center gap-3">
+                            <i class="fas fa-heart text-red-500"></i>
+                            Your Interests
+                        </h3>
+                        <div class="space-y-4">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="interests" value="adventure" class="sr-only">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-mountain text-blue-600"></i>
+                                    <span class="font-medium">Adventure & Outdoor</span>
+                                </div>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="interests" value="relaxation" class="sr-only">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-umbrella-beach text-orange-500"></i>
+                                    <span class="font-medium">Relaxation & Beach</span>
+                                </div>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="interests" value="cultural" class="sr-only">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-landmark text-purple-600"></i>
+                                    <span class="font-medium">Cultural Experiences</span>
+                                </div>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="interests" value="nature" class="sr-only">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-leaf text-green-600"></i>
+                                    <span class="font-medium">Nature & Wildlife</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Trip Details -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center gap-3">
+                            <i class="fas fa-cog text-blue-600"></i>
+                            Trip Details
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label flex items-center gap-2">
+                                <i class="fas fa-wallet text-green-600"></i>
+                                Budget
+                            </label>
+                            <select name="budget" class="form-control">
+                                <option value="Low">💰 Budget-Friendly</option>
+                                <option value="Medium" selected>💳 Medium</option>
+                                <option value="High">💎 Luxury</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label flex items-center gap-2">
+                                <i class="fas fa-calendar-alt text-blue-600"></i>
+                                Travel Season
+                            </label>
+                            <select name="season" class="form-control">
+                                <option value="Spring">🌸 Spring</option>
+                                <option value="Summer">☀️ Summer</option>
+                                <option value="Autumn">🍂 Autumn</option>
+                                <option value="Winter">❄️ Winter</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="form-group">
+                                <label class="form-label flex items-center gap-2">
+                                    <i class="fas fa-users text-purple-600"></i>
+                                    Travelers
+                                </label>
+                                <select name="travelers" class="form-control">
+    <option value="1">🧍 Solo Traveler (1 Person)</option>
+    <option value="2">🧍‍🧍 Duo (2 People)</option>
+    <option value="3-5" selected>👨‍👩‍👧 Group (3-5 People)</option>
+    <option value="6+">👨‍👩‍👧‍👦 Large Group (6+ People)</option>
+</select>
+
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label flex items-center gap-2">
+                                    <i class="fas fa-clock text-orange-600"></i>
+                                    Duration
+                                </label>
+                                <select name="days" class="form-control">
+    <option value="weekend">⛱️ Weekend</option>
+    <option value="1week">🧳 1 Week</option>
+    <option value="2weeks" selected>🌍 2 Weeks</option>
+    <option value="1month">🧭 1 Month+</option>
+</select>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button type="submit" class="btn-primary pulse">
+                        <i class="fas fa-rocket"></i>
+                        Find My Perfect Destination
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="container mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                Why Choose TravelAI?
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                Our AI-powered platform delivers personalized travel experiences based on your unique preferences
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass rounded-2xl p-8 text-center card-hover">
+                <div class="icon-container bg-gradient-to-br from-blue-500 to-purple-600">
+                    <i class="fas fa-robot text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">AI-Powered Recommendations</h3>
+                <p class="text-gray-600">
+                    Our advanced algorithm analyzes thousands of data points to find destinations perfect for your unique style
+                </p>
+            </div>
+            
+            <div class="glass rounded-2xl p-8 text-center card-hover">
+                <div class="icon-container bg-gradient-to-br from-orange-500 to-pink-600">
+                    <i class="fas fa-globe-americas text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Global Destinations</h3>
+                <p class="text-gray-600">
+                    Access carefully curated recommendations for over 50 incredible destinations worldwide
+                </p>
+            </div>
+            
+            <div class="glass rounded-2xl p-8 text-center card-hover">
+                <div class="icon-container bg-gradient-to-br from-purple-500 to-indigo-600">
+                    <i class="fas fa-chart-pie text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Data-Driven Insights</h3>
+                <p class="text-gray-600">
+                    Get detailed analytics and insights on destinations to make informed travel decisions
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-plane text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">TravelAI</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Your intelligent travel companion helping you discover perfect destinations worldwide with the power of AI.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-map text-blue-400"></i>
+                        Navigation
+                    </h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fas fa-home text-xs"></i>Home
+                        </a></li>
+                        <li><a href="/popular" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fas fa-star text-xs"></i>Popular Destinations
+                        </a></li>
+                        <li><a href="/insights" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fas fa-chart-line text-xs"></i>Destination Insights
+                        </a></li>
+                        <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fas fa-envelope text-xs"></i>Contact Us
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-book text-orange-400"></i>
+                        Resources
+                    </h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fas fa-map-marked-alt text-xs"></i>Travel Guides
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fas fa-calendar text-xs"></i>Seasonal Tips
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fas fa-calculator text-xs"></i>Budget Planning
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fas fa-suitcase text-xs"></i>Packing Checklist
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-heart text-red-400"></i>
+                        Connect
+                    </h4>
+                    <div class="flex space-x-4 mb-4">
+    <a href="https://www.linkedin.com/in/hemanthvedantam-813455280" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors">
+        <i class="fab fa-linkedin-in text-xl"></i>
+    </a>
+    <a href="https://twitter.com/yourhandle" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors">
+        <i class="fab fa-twitter text-xl"></i>
+    </a>
+    <a href="https://instagram.com/yourhandle" target="_blank" class="text-gray-400 hover:text-pink-400 transition-colors">
+        <i class="fab fa-instagram text-xl"></i>
+    </a>
+</div>
+
+                    <p class="text-gray-400 text-sm">
+                        Follow us for travel inspiration and updates
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Destiny.AI All rights reserved. Made with ❤️ for travelers worldwide.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+   <script>
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatbox = document.getElementById('chatbox');
+
+    chatToggle.addEventListener('click', () => {
+        chatbox.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>

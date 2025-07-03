@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Destiny.AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .contact-card {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .floating-label {
+            position: relative;
+        }
+        
+        .floating-label input,
+        .floating-label textarea {
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .floating-label label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: #6b7280;
+            transition: all 0.2s ease;
+            pointer-events: none;
+            background: white;
+            padding: 0 0.25rem;
+        }
+        
+        .floating-label input:focus + label,
+        .floating-label textarea:focus + label,
+        .floating-label input:not(:placeholder-shown) + label,
+        .floating-label textarea:not(:placeholder-shown) + label {
+            top: -0.5rem;
+            left: 0.75rem;
+            font-size: 0.75rem;
+            color: #4f46e5;
+            font-weight: 500;
+        }
+        
+        .input-field {
+            transition: all 0.3s ease;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+            border-color: #4f46e5;
+        }
+        
+        .input-field.error {
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+        }
+        
+        .error-message {
+            color: #ef4444;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .error-message.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .submit-btn .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .submit-btn.loading .loading {
+            opacity: 1;
+        }
+        
+        .submit-btn.loading .btn-text {
+            opacity: 0;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .developer-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .developer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .developer-card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-2xl font-bold">Destiny.AI</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-home text-sm"></i>
+                        Home
+                    </a>
+                    <a href="/popular" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-star text-sm"></i>
+                        Popular
+                    </a>
+                    <a href="/insights" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-chart-line text-sm"></i>
+                        Insights
+                    </a>
+                    <a href="/contact" class="hover:text-blue-200 transition-colors flex items-center gap-2">
+                        <i class="fas fa-envelope text-sm"></i>
+                        Contact
+                    </a>
+                </div>
+                <button class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Get In Touch</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Have questions or feedback about Destiny.AI? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white/90 p-8 rounded-2xl contact-card">
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold mb-2">Send us a message</h2>
+                        <p class="text-gray-600">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    </div>
+                    
+                    <form id="contactForm" method="POST">
+                        <div class="mb-6">
+                            <div class="floating-label">
+                                <input type="text" id="name" name="name" placeholder=" " required class="w-full px-4 py-3 border rounded-lg input-field">
+                                <label for="name">Full Name</label>
+                            </div>
+                            <div class="error-message" id="nameError">Please enter your full name</div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="floating-label">
+                                <input type="email" id="email" name="email" placeholder=" " required class="w-full px-4 py-3 border rounded-lg input-field">
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="floating-label">
+                                <textarea id="message" name="message" rows="5" placeholder=" " required class="w-full px-4 py-3 border rounded-lg input-field resize-none"></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <div class="error-message" id="messageError">Please enter your message</div>
+                        </div>
+                        
+                        <button type="submit" class="w-full text-white font-bold py-4 px-6 rounded-lg transition submit-btn">
+                            <span class="btn-text flex items-center justify-center gap-2">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </span>
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="space-y-6">
+                    <!-- Developer Information -->
+                    <div class="developer-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Developed by Hemanth</h3>
+                                <p class="text-white/80">AI Application Developer</p>
+                            </div>
+                        </div>
+                        <p class="text-white/90 mb-4">Destiny.AI is an innovative AI-powered travel recommendation platform designed to help you discover your perfect destinations based on your preferences and travel style.</p>
+                        <div class="flex items-center text-white/80">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>For development queries & collaboration</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Information Cards -->
+                    <div class="info-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-indigo-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Email Support</h3>
+                                <p class="text-gray-600">hemanthvedantam@gmail.com</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">Get in touch for general inquiries and support</p>
+                    </div>
+                    
+                    <div class="info-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-linkedin text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Professional Network</h3>
+                                <p class="text-gray-600">linkedin.com/in/hemanth-vedantam-813455280</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">Connect with us professionally</p>
+                    </div>
+                    
+                    <div class="info-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Location</h3>
+                                <p class="text-gray-600">Guntur, India</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">Our headquarters and main development center</p>
+                    </div>
+                    
+                    <!-- FAQ Section -->
+                    <div class="bg-white/90 p-6 rounded-2xl contact-card">
+                        <h3 class="text-xl font-bold mb-4 gradient-text">Frequently Asked Questions</h3>
+                        <div class="space-y-4">
+                            <details class="group">
+                                <summary class="font-semibold cursor-pointer text-gray-700 hover:text-indigo-600 transition-colors">
+                                    How does the AI recommendation work?
+                                </summary>
+                                <p class="text-gray-600 mt-2 pl-4">Our AI analyzes your preferences and matches them with thousands of data points from our destinations database to provide personalized travel recommendations.</p>
+                            </details>
+                            
+                            <details class="group">
+                                <summary class="font-semibold cursor-pointer text-gray-700 hover:text-indigo-600 transition-colors">
+                                    Can I save my travel preferences?
+                                </summary>
+                                <p class="text-gray-600 mt-2 pl-4">Yes, create an account to save your preferences and access them anytime for future travel planning.</p>
+                            </details>
+                            
+                            <details class="group">
+                                <summary class="font-semibold cursor-pointer text-gray-700 hover:text-indigo-600 transition-colors">
+                                    How often is the destination data updated?
+                                </summary>
+                                <p class="text-gray-600 mt-2 pl-4">We update our database quarterly with new destinations, updated information, and enhanced AI models.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <div class="text-2xl font-bold gradient-text mb-2">Destiny.AI</div>
+                <p class="text-gray-400">Discover your perfect destination with AI-powered recommendations</p>
+            </div>
+            <div class="text-center">
+                <p class="text-gray-400 mb-4">&copy; 2025 Destiny.AI All rights reserved. Made with ❤️ for travelers worldwide.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form validation and animation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('.submit-btn');
+            const name = form.querySelector('#name');
+            const email = form.querySelector('#email');
+            const message = form.querySelector('#message');
+            
+            // Reset previous errors
+            clearErrors();
+            
+            let isValid = true;
+            
+            // Validate name
+            if (name.value.trim().length < 2) {
+                showError('name', 'Please enter your full name');
+                isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                showError('email', 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            // Validate message
+            if (message.value.trim().length < 10) {
+                showError('message', 'Please enter a message (at least 10 characters)');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show loading state
+                submitBtn.classList.add('loading');
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    
+                    // Show success message
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4';
+                    successDiv.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Thank you! Your message has been sent successfully.';
+                    
+                    form.insertBefore(successDiv, form.firstChild);
+                    form.reset();
+                    
+                    // Remove success message after 5 seconds
+                    setTimeout(() => {
+                        successDiv.remove();
+                    }, 5000);
+                    
+                }, 2000);
+            }
+        });
+        
+        function showError(fieldName, message) {
+            const field = document.getElementById(fieldName);
+            const errorDiv = document.getElementById(fieldName + 'Error');
+            
+            field.classList.add('error');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+        }
+        
+        function clearErrors() {
+            const fields = ['name', 'email', 'message'];
+            fields.forEach(fieldName => {
+                const field = document.getElementById(fieldName);
+                const errorDiv = document.getElementById(fieldName + 'Error');
+                
+                field.classList.remove('error');
+                errorDiv.classList.remove('show');
+            });
+        }
+        
+        // Clear error when user starts typing
+        document.querySelectorAll('.input-field').forEach(field => {
+            field.addEventListener('input', function() {
+                if (this.classList.contains('error')) {
+                    const fieldName = this.id;
+                    const errorDiv = document.getElementById(fieldName + 'Error');
+                    
+                    this.classList.remove('error');
+                    errorDiv.classList.remove('show');
+                }
+            });
+        });
+        
+        // Add pulse animation to developer card
+        const developerCard = document.querySelector('.developer-card');
+        setInterval(() => {
+            developerCard.classList.add('pulse-animation');
+            setTimeout(() => {
+                developerCard.classList.remove('pulse-animation');
+            }, 2000);
+        }, 10000);
+    </script>
+</body>
+</html>

@@ -1,21 +1,10 @@
 Flask==2.3.3
 gunicorn==21.2.0
-
-# Data handling
 pandas==2.2.2
 numpy==1.26.4
-
-# NLP and Text Processing
 nltk==3.8.1
 spacy==3.7.2
 scikit-learn==1.4.2
-
-# Visualization (if used in backend)
 matplotlib==3.8.4
 seaborn==0.13.2
-
-# For JSON and API interactions
 requests==2.31.0
-
-# WSGI Server for Production
-gunicorn==21.2.0

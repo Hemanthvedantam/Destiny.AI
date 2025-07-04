@@ -5,6 +5,7 @@
 
 **Destiny.AI** is an AI-powered travel recommendation system that helps users discover their ideal travel destinations based on preferences, popularity, and real-time review insights. It combines personalized recommendations with interactive visualizations and a clean, user-friendly interface.
 
+Live Server : https://destiny-ai-4.onrender.com
 ---
 
 ## 🌟 Key Features
